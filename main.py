@@ -19,4 +19,4 @@ if __name__ == '__main__':
             if second_choice == winning_door:
                 wins += 1
         win_percent = round((float(wins) / trials) * 100, 3)
-        print(f'Switch doors: {"Yes" if switch else "No "} Wins: {wins} Losses: {losses} Win Rate: {win_percent}%')
+        print(f'Switch doors: {"Yes" if switch else "No "} Wins: {wins} Losses: {trials-wins} Win Rate: {win_percent}%')
