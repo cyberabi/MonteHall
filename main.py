@@ -5,7 +5,6 @@ if __name__ == '__main__':
     trials = 1000000
     for switch in (False, True):
         wins = 0
-        losses = 0
         for trial in range(trials):
             # The prize could be anywhere
             winning_door = random.randint(0, 2)
@@ -19,7 +18,5 @@ if __name__ == '__main__':
             second_choice = first_choice if not switch else other_door
             if second_choice == winning_door:
                 wins += 1
-            else:
-                losses += 1
         win_percent = round((float(wins) / trials) * 100, 3)
         print(f'Switch doors: {"Yes" if switch else "No "} Wins: {wins} Losses: {losses} Win Rate: {win_percent}%')
